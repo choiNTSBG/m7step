@@ -1,0 +1,900 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &6078424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6078425}
+  m_Layer: 0
+  m_Name: Android - Google Fit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6078425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1906659469}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519420028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519420032}
+  - component: {fileID: 519420031}
+  - component: {fileID: 519420029}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &519420029
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+--- !u!20 &519420031
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &519420032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &580355424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580355425}
+  - component: {fileID: 580355428}
+  - component: {fileID: 580355427}
+  - component: {fileID: 580355426}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &580355425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1333255220}
+  m_Father: {fileID: 814876933}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1435}
+  m_SizeDelta: {x: 1000, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &580355426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 580355427}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 905238301}
+        m_MethodName: OnClickGetGoogleCode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &580355427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &580355428
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355424}
+  m_CullTransparentMesh: 0
+--- !u!1 &814876929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 814876933}
+  - component: {fileID: 814876932}
+  - component: {fileID: 814876931}
+  - component: {fileID: 814876930}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &814876930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814876929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &814876931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814876929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &814876932
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814876929}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &814876933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814876929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 2044935816}
+  - {fileID: 580355425}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &905238299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905238300}
+  - component: {fileID: 905238301}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905238300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905238299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1906659469}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905238301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905238299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc4d7dc18856d24d94ecd64d56175fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: {fileID: 0}
+  accelerationCounter: {fileID: 0}
+  text: {fileID: 2044935817}
+  stepCounter: {fileID: 0}
+  pedometer: {fileID: 0}
+  flightStepCounter: {fileID: 0}
+  latitudeValue: {fileID: 0}
+  longitudeValue: {fileID: 0}
+  sleepAnalysis: {fileID: 0}
+  distance1: {fileID: 0}
+  distance2: {fileID: 0}
+  distance3: {fileID: 0}
+  speedValue: {fileID: 0}
+  stepsDataValue: {fileID: 0}
+  walkDistanceDataValue: {fileID: 0}
+  flightStairsDataValue: {fileID: 0}
+  sleepAnalysisDataValue: {fileID: 0}
+  stepLogContainer: {fileID: 0}
+  stepLogPrefab: {fileID: 0}
+--- !u!1 &1333255219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333255220}
+  - component: {fileID: 1333255222}
+  - component: {fileID: 1333255221}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1333255220
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333255219}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 580355425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1333255221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333255219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 100
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Sign in With Google
+--- !u!222 &1333255222
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333255219}
+  m_CullTransparentMesh: 0
+--- !u!1 &1438119617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1438119620}
+  - component: {fileID: 1438119619}
+  - component: {fileID: 1438119618}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1438119618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438119617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1438119619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438119617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1438119620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438119617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1522109105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522109106}
+  - component: {fileID: 1522109109}
+  - component: {fileID: 1522109108}
+  - component: {fileID: 1522109107}
+  m_Layer: 0
+  m_Name: IOS - HealthKit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522109106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522109105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1906659469}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522109107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522109105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93385e60b776f4c7f843971520f688d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveData: AAEAAAD/////AQAAAAAAAAAEAQAAAPYBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtCZWxpZWZFbmdpbmUuSGVhbHRoS2l0LkhLTmFtZVZhbHVlUGFpciwgQXNzZW1ibHktQ1NoYXJwLCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbF1dBAAAAAdWZXJzaW9uCENvbXBhcmVyCEhhc2hTaXplDUtleVZhbHVlUGFpcnMAAwADCJIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuR2VuZXJpY0VxdWFsaXR5Q29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0I+gFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5LZXlWYWx1ZVBhaXJgMltbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbQmVsaWVmRW5naW5lLkhlYWx0aEtpdC5IS05hbWVWYWx1ZVBhaXIsIEFzc2VtYmx5LUNTaGFycCwgVmVyc2lvbj0wLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGxdXVtdpwAAAAkCAAAAxQAAAAkDAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAcDAAAAAAEAAACnAAAAA/gBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuS2V5VmFsdWVQYWlyYDJbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV0sW0JlbGllZkVuZ2luZS5IZWFsdGhLaXQuSEtOYW1lVmFsdWVQYWlyLCBBc3NlbWJseS1DU2hhcnAsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsXV0MBQAAAEZBc3NlbWJseS1DU2hhcnAsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBPz////4AVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLktleVZhbHVlUGFpcmAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtCZWxpZWZFbmdpbmUuSGVhbHRoS2l0LkhLTmFtZVZhbHVlUGFpciwgQXNzZW1ibHktQ1NoYXJwLCBWZXJzaW9uPTAuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbF1dAgAAAANrZXkFdmFsdWUBBCZCZWxpZWZFbmdpbmUuSGVhbHRoS2l0LkhLTmFtZVZhbHVlUGFpcgUAAAAGBgAAACVIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJCb2R5TWFzc0luZGV4CQcAAAAB+P////z///8GCQAAAClIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJCb2R5RmF0UGVyY2VudGFnZQkKAAAAAfX////8////BgwAAAAeSEtRdWFudGl0eVR5cGVJZGVudGlmaWVySGVpZ2h0CQ0AAAAB8v////z///8GDwAAACBIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJCb2R5TWFzcwkQAAAAAe/////8////BhIAAAAkSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyTGVhbkJvZHlNYXNzCRMAAAAB7P////z///8GFQAAACpIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJXYWlzdENpcmN1bWZlcmVuY2UJFgAAAAHp/////P///wYYAAAAIUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclN0ZXBDb3VudAkZAAAAAeb////8////BhsAAAAuSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlzdGFuY2VXYWxraW5nUnVubmluZwkcAAAAAeP////8////Bh4AAAAnSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlzdGFuY2VDeWNsaW5nCR8AAAAB4P////z///8GIQAAACpIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaXN0YW5jZVdoZWVsY2hhaXIJIgAAAAHd/////P///wYkAAAAKUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckJhc2FsRW5lcmd5QnVybmVkCSUAAAAB2v////z///8GJwAAACpIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJBY3RpdmVFbmVyZ3lCdXJuZWQJKAAAAAHX/////P///wYqAAAAJkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckZsaWdodHNDbGltYmVkCSsAAAAB1P////z///8GLQAAACBIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJOaWtlRnVlbAkuAAAAAdH////8////BjAAAAApSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyQXBwbGVFeGVyY2lzZVRpbWUJMQAAAAHO/////P///wYzAAAAIUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclB1c2hDb3VudAk0AAAAAcv////8////BjYAAAAoSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlzdGFuY2VTd2ltbWluZwk3AAAAAcj////8////BjkAAAArSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyU3dpbW1pbmdTdHJva2VDb3VudAk6AAAAAcX////8////BjwAAAAeSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyVk8yTWF4CT0AAAABwv////z///8GPwAAADJIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaXN0YW5jZURvd25oaWxsU25vd1Nwb3J0cwlAAAAAAb/////8////BkIAAAAmSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyQXBwbGVTdGFuZFRpbWUJQwAAAAG8/////P///wZFAAAAJEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllcldhbGtpbmdTcGVlZAlGAAAAAbn////8////BkgAAAA2SEtRdWFudGl0eVR5cGVJZGVudGlmaWVyV2Fsa2luZ0RvdWJsZVN1cHBvcnRQZXJjZW50YWdlCUkAAAABtv////z///8GSwAAADJIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJXYWxraW5nQXN5bW1ldHJ5UGVyY2VudGFnZQlMAAAAAbP////8////Bk4AAAApSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyV2Fsa2luZ1N0ZXBMZW5ndGgJTwAAAAGw/////P///wZRAAAAMUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclNpeE1pbnV0ZVdhbGtUZXN0RGlzdGFuY2UJUgAAAAGt/////P///wZUAAAAKEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclN0YWlyQXNjZW50U3BlZWQJVQAAAAGq/////P///wZXAAAAKUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclN0YWlyRGVzY2VudFNwZWVkCVgAAAABp/////z///8GWgAAACVIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJBcHBsZU1vdmVUaW1lCVsAAAABpP////z///8GXQAAACFIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJIZWFydFJhdGUJXgAAAAGh/////P///wZgAAAAJ0hLUXVhbnRpdHlUeXBlSWRlbnRpZmllckJvZHlUZW1wZXJhdHVyZQlhAAAAAZ7////8////BmMAAAAsSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyQmFzYWxCb2R5VGVtcGVyYXR1cmUJZAAAAAGb/////P///wZmAAAALUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckJsb29kUHJlc3N1cmVTeXN0b2xpYwlnAAAAAZj////8////BmkAAAAuSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyQmxvb2RQcmVzc3VyZURpYXN0b2xpYwlqAAAAAZX////8////BmwAAAAnSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyUmVzcGlyYXRvcnlSYXRlCW0AAAABkv////z///8GbwAAAChIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJSZXN0aW5nSGVhcnRSYXRlCXAAAAABj/////z///8GcgAAAC9IS1F1YW50aXR5VHlwZUlkZW50aWZpZXJXYWxraW5nSGVhcnRSYXRlQXZlcmFnZQlzAAAAAYz////8////BnUAAAAwSEtRdWFudGl0eVR5cGVJZGVudGlmaWVySGVhcnRSYXRlVmFyaWFiaWxpdHlTRE5OCXYAAAABif////z///8GeAAAAChIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJPeHlnZW5TYXR1cmF0aW9uCXkAAAABhv////z///8GewAAADBIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJQZXJpcGhlcmFsUGVyZnVzaW9uSW5kZXgJfAAAAAGD/////P///wZ+AAAAJEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckJsb29kR2x1Y29zZQl/AAAAAYD////8////BoEAAAArSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyTnVtYmVyT2ZUaW1lc0ZhbGxlbgmCAAAAAX3////8////BoQAAAAtSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRWxlY3Ryb2Rlcm1hbEFjdGl2aXR5CYUAAAABev////z///8GhwAAACRIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJJbmhhbGVyVXNhZ2UJiAAAAAF3/////P///waKAAAAJ0hLUXVhbnRpdHlUeXBlSWRlbnRpZmllckluc3VsaW5EZWxpdmVyeQmLAAAAAXT////8////Bo0AAAArSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyQmxvb2RBbGNvaG9sQ29udGVudAmOAAAAAXH////8////BpAAAAArSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRm9yY2VkVml0YWxDYXBhY2l0eQmRAAAAAW7////8////BpMAAAAvSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRm9yY2VkRXhwaXJhdG9yeVZvbHVtZTEJlAAAAAFr/////P///waWAAAALkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllclBlYWtFeHBpcmF0b3J5Rmxvd1JhdGUJlwAAAAFo/////P///waZAAAAMkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckVudmlyb25tZW50YWxBdWRpb0V4cG9zdXJlCZoAAAABZf////z///8GnAAAAC5IS1F1YW50aXR5VHlwZUlkZW50aWZpZXJIZWFkcGhvbmVBdWRpb0V4cG9zdXJlCZ0AAAABYv////z///8GnwAAACdIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5RmF0VG90YWwJoAAAAAFf/////P///waiAAAAMUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlGYXRQb2x5dW5zYXR1cmF0ZWQJowAAAAFc/////P///walAAAAMUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlGYXRNb25vdW5zYXR1cmF0ZWQJpgAAAAFZ/////P///waoAAAAK0hLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlGYXRTYXR1cmF0ZWQJqQAAAAFW/////P///warAAAAKkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlDaG9sZXN0ZXJvbAmsAAAAAVP////8////Bq4AAAAlSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeVNvZGl1bQmvAAAAAVD////8////BrEAAAAsSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeUNhcmJvaHlkcmF0ZXMJsgAAAAFN/////P///wa0AAAAJEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlGaWJlcgm1AAAAAUr////8////BrcAAAAkSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeVN1Z2FyCbgAAAABR/////z///8GugAAAC1IS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5RW5lcmd5Q29uc3VtZWQJuwAAAAFE/////P///wa9AAAAJkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlQcm90ZWluCb4AAAABQf////z///8GwAAAACdIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5Vml0YW1pbkEJwQAAAAE+/////P///wbDAAAAKEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlWaXRhbWluQjYJxAAAAAE7/////P///wbGAAAAKUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlWaXRhbWluQjEyCccAAAABOP////z///8GyQAAACdIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5Vml0YW1pbkMJygAAAAE1/////P///wbMAAAAJ0hLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlWaXRhbWluRAnNAAAAATL////8////Bs8AAAAnSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeVZpdGFtaW5FCdAAAAABL/////z///8G0gAAACdIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5Vml0YW1pbksJ0wAAAAEs/////P///wbVAAAAJkhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlDYWxjaXVtCdYAAAABKf////z///8G2AAAACNIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5SXJvbgnZAAAAASb////8////BtsAAAAmSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeVRoaWFtaW4J3AAAAAEj/////P///wbeAAAAKUhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlSaWJvZmxhdmluCd8AAAABIP////z///8G4QAAACVIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5TmlhY2luCeIAAAABHf////z///8G5AAAACVIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5Rm9sYXRlCeUAAAABGv////z///8G5wAAACVIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5QmlvdGluCegAAAABF/////z///8G6gAAAC5IS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5UGFudG90aGVuaWNBY2lkCesAAAABFP////z///8G7QAAAClIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5UGhvc3Bob3J1cwnuAAAAARH////8////BvAAAAAlSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeUlvZGluZQnxAAAAAQ7////8////BvMAAAAoSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeU1hZ25lc2l1bQn0AAAAAQv////8////BvYAAAAjSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeVppbmMJ9wAAAAEI/////P///wb5AAAAJ0hLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlTZWxlbml1bQn6AAAAAQX////8////BvwAAAAlSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeUNvcHBlcgn9AAAAAQL////8////Bv8AAAAoSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeU1hbmdhbmVzZQkAAQAAAf/+///8////BgIBAAAnSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeUNocm9taXVtCQMBAAAB/P7///z///8GBQEAAClIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5TW9seWJkZW51bQkGAQAAAfn+///8////BggBAAAnSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyRGlldGFyeUNobG9yaWRlCQkBAAAB9v7///z///8GCwEAAChIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5UG90YXNzaXVtCQwBAAAB8/7///z///8GDgEAACdIS1F1YW50aXR5VHlwZUlkZW50aWZpZXJEaWV0YXJ5Q2FmZmVpbmUJDwEAAAHw/v///P///wYRAQAAJEhLUXVhbnRpdHlUeXBlSWRlbnRpZmllckRpZXRhcnlXYXRlcgkSAQAAAe3+///8////BhQBAAAiSEtRdWFudGl0eVR5cGVJZGVudGlmaWVyVVZFeHBvc3VyZQkVAQAAAer+///8////BhcBAAAlSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyU2xlZXBBbmFseXNpcwkYAQAAAef+///8////BhoBAAAmSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyQXBwbGVTdGFuZEhvdXIJGwEAAAHk/v///P///wYdAQAALEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckNlcnZpY2FsTXVjdXNRdWFsaXR5CR4BAAAB4f7///z///8GIAEAACtIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJPdnVsYXRpb25UZXN0UmVzdWx0CSEBAAAB3v7///z///8GIwEAACVIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJNZW5zdHJ1YWxGbG93CSQBAAAB2/7///z///8GJgEAAC5IS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJJbnRlcm1lbnN0cnVhbEJsZWVkaW5nCScBAAAB2P7///z///8GKQEAACZIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJTZXh1YWxBY3Rpdml0eQkqAQAAAdX+///8////BiwBAAAmSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTWluZGZ1bFNlc3Npb24JLQEAAAHS/v///P///wYvAQAAKkhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckhpZ2hIZWFydFJhdGVFdmVudAkwAQAAAc/+///8////BjIBAAApSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTG93SGVhcnRSYXRlRXZlbnQJMwEAAAHM/v///P///wY1AQAAMUhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllcklycmVndWxhckhlYXJ0Umh5dGhtRXZlbnQJNgEAAAHJ/v///P///wY4AQAAKkhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckF1ZGlvRXhwb3N1cmVFdmVudAk5AQAAAcb+///8////BjsBAAAqSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyVG9vdGhicnVzaGluZ0V2ZW50CTwBAAABw/7///z///8GPgEAACdIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJBYmRvbWluYWxDcmFtcHMJPwEAAAHA/v///P///wZBAQAAHEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckFjbmUJQgEAAAG9/v///P///wZEAQAAJ0hLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckFwcGV0aXRlQ2hhbmdlcwlFAQAAAbr+///8////BkcBAAAgSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyQmxvYXRpbmcJSAEAAAG3/v///P///wZKAQAAIkhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckJyZWFzdFBhaW4JSwEAAAG0/v///P///wZNAQAALEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckNoZXN0VGlnaHRuZXNzT3JQYWluCU4BAAABsf7///z///8GUAEAAB5IS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJDaGlsbHMJUQEAAAGu/v///P///wZTAQAAJEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckNvbnN0aXBhdGlvbglUAQAAAav+///8////BlYBAAAgSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyQ291Z2hpbmcJVwEAAAGo/v///P///wZZAQAAIEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckRpYXJyaGVhCVoBAAABpf7///z///8GXAEAACFIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJEaXp6aW5lc3MJXQEAAAGi/v///P///wZfAQAAIEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckZhaW50aW5nCWABAAABn/7///z///8GYgEAAB9IS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJGYXRpZ3VlCWMBAAABnP7///z///8GZQEAAB1IS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJGZXZlcglmAQAAAZn+///8////BmgBAAArSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyR2VuZXJhbGl6ZWRCb2R5QWNoZQlpAQAAAZb+///8////BmsBAAAgSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVySGVhZGFjaGUJbAEAAAGT/v///P///wZuAQAAIUhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckhlYXJ0YnVybglvAQAAAZD+///8////BnEBAAAiSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVySG90Rmxhc2hlcwlyAQAAAY3+///8////BnQBAAAjSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTG9zc09mU21lbGwJdQEAAAGK/v///P///wZ3AQAAI0hLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckxvc3NPZlRhc3RlCXgBAAABh/7///z///8GegEAACVIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJMb3dlckJhY2tQYWluCXsBAAABhP7///z///8GfQEAACNIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJNb29kQ2hhbmdlcwl+AQAAAYH+///8////BoABAAAeSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTmF1c2VhCYEBAAABfv7///z///8GgwEAACJIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJQZWx2aWNQYWluCYQBAAABe/7///z///8GhgEAADpIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJSYXBpZFBvdW5kaW5nT3JGbHV0dGVyaW5nSGVhcnRiZWF0CYcBAAABeP7///z///8GiQEAACFIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJSdW5ueU5vc2UJigEAAAF1/v///P///waMAQAAKUhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllclNob3J0bmVzc09mQnJlYXRoCY0BAAABcv7///z///8GjwEAACdIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJTaW51c0Nvbmdlc3Rpb24JkAEAAAFv/v///P///waSAQAAKEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllclNraXBwZWRIZWFydGJlYXQJkwEAAAFs/v///P///waVAQAAJEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllclNsZWVwQ2hhbmdlcwmWAQAAAWn+///8////BpgBAAAiSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyU29yZVRocm9hdAmZAQAAAWb+///8////BpsBAAAgSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyVm9taXRpbmcJnAEAAAFj/v///P///waeAQAAIEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllcldoZWV6aW5nCZ8BAAABYP7///z///8GoQEAADdIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJFbnZpcm9ubWVudGFsQXVkaW9FeHBvc3VyZUV2ZW50CaIBAAABXf7///z///8GpAEAAChIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJIYW5kd2FzaGluZ0V2ZW50CaUBAAABWv7///z///8GpwEAAC1IS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJMb3dDYXJkaW9GaXRuZXNzRXZlbnQJqAEAAAFX/v///P///waqAQAAK0hLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckJsYWRkZXJJbmNvbnRpbmVuY2UJqwEAAAFU/v///P///watAQAAH0hLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckRyeVNraW4JrgEAAAFR/v///P///wawAQAAIEhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllckhhaXJMb3NzCbEBAAABTv7///z///8GswEAACNIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJNZW1vcnlMYXBzZQm0AQAAAUv+///8////BrYBAAAjSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTmlnaHRTd2VhdHMJtwEAAAFI/v///P///wa5AQAAJkhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllclZhZ2luYWxEcnluZXNzCboBAAABRf7///z///8GvAEAADNIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJIZWFkcGhvbmVBdWRpb0V4cG9zdXJlRXZlbnQJvQEAAAFC/v///P///wa/AQAAIUhLQ2F0ZWdvcnlUeXBlSWRlbnRpZmllclByZWduYW5jeQnAAQAAAT/+///8////BsIBAAAhSEtDYXRlZ29yeVR5cGVJZGVudGlmaWVyTGFjdGF0aW9uCcMBAAABPP7///z///8GxQEAACVIS0NhdGVnb3J5VHlwZUlkZW50aWZpZXJDb250cmFjZXB0aXZlCcYBAAABOf7///z///8GyAEAACtIS0NoYXJhY3RlcmlzdGljVHlwZUlkZW50aWZpZXJCaW9sb2dpY2FsU2V4CckBAAABNv7///z///8GywEAACdIS0NoYXJhY3RlcmlzdGljVHlwZUlkZW50aWZpZXJCbG9vZFR5cGUJzAEAAAEz/v///P///wbOAQAAKUhLQ2hhcmFjdGVyaXN0aWNUeXBlSWRlbnRpZmllckRhdGVPZkJpcnRoCc8BAAABMP7///z///8G0QEAADFIS0NoYXJhY3RlcmlzdGljVHlwZUlkZW50aWZpZXJGaXR6cGF0cmlja1NraW5UeXBlCdIBAAABLf7///z///8G1AEAACtIS0NoYXJhY3RlcmlzdGljVHlwZUlkZW50aWZpZXJXaGVlbGNoYWlyVXNlCdUBAAABKv7///z///8G1wEAAC5IS0NoYXJhY3RlcmlzdGljVHlwZUlkZW50aWZpZXJBY3Rpdml0eU1vdmVNb2RlCdgBAAABJ/7///z///8G2gEAAChIS0NvcnJlbGF0aW9uVHlwZUlkZW50aWZpZXJCbG9vZFByZXNzdXJlCdsBAAABJP7///z///8G3QEAAB9IS0NvcnJlbGF0aW9uVHlwZUlkZW50aWZpZXJGb29kCd4BAAABIf7///z///8G4AEAABtIS0RvY3VtZW50VHlwZUlkZW50aWZpZXJDREEJ4QEAAAEe/v///P///wbjAQAAF0hLV29ya291dFR5cGVJZGVudGlmaWVyCeQBAAABG/7///z///8G5gEAACVIS0NsaW5pY2FsVHlwZUlkZW50aWZpZXJBbGxlcmd5UmVjb3JkCecBAAABGP7///z///8G6QEAACdIS0NsaW5pY2FsVHlwZUlkZW50aWZpZXJDb25kaXRpb25SZWNvcmQJ6gEAAAEV/v///P///wbsAQAAKkhLQ2xpbmljYWxUeXBlSWRlbnRpZmllckltbXVuaXphdGlvblJlY29yZAntAQAAARL+///8////Bu8BAAAnSEtDbGluaWNhbFR5cGVJZGVudGlmaWVyTGFiUmVzdWx0UmVjb3JkCfABAAABD/7///z///8G8gEAAChIS0NsaW5pY2FsVHlwZUlkZW50aWZpZXJNZWRpY2F0aW9uUmVjb3JkCfMBAAABDP7///z///8G9QEAACdIS0NsaW5pY2FsVHlwZUlkZW50aWZpZXJQcm9jZWR1cmVSZWNvcmQJ9gEAAAEJ/v///P///wb4AQAAJ0hLQ2xpbmljYWxUeXBlSWRlbnRpZmllclZpdGFsU2lnblJlY29yZAn5AQAABQcAAAAmQmVsaWVmRW5naW5lLkhlYWx0aEtpdC5IS05hbWVWYWx1ZVBhaXIEAAAABG5hbWUEcmVhZAV3cml0ZQh3cml0YWJsZQEAAAABAQEFAAAABvoBAAAPQm9keSBNYXNzIEluZGV4AAABAQoAAAAHAAAABvsBAAATQm9keSBGYXQgUGVyY2VudGFnZQAAAQENAAAABwAAAAb8AQAABkhlaWdodAAAAQEQAAAABwAAAAb9AQAACUJvZHkgTWFzcwAAAQETAAAABwAAAAb+AQAADkxlYW4gQm9keSBNYXNzAAABARYAAAAHAAAABv8BAAATV2Fpc3QgQ2lyY3VtZmVyZW5jZQAAAQEZAAAABwAAAAYA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
+  healthShareUsageDescription: We require access to health data for testing.
+  healthUpdateUsageDescription: We update health data for testing.
+  clinicalUsageDescription: We only request clinical data that we need.
+--- !u!114 &1522109108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522109105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3936b478ad2856241aa0af6cf8e6afc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  types: {fileID: 1522109107}
+--- !u!114 &1522109109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522109105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772930fcff36d4633afb7448c9ee36a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1906659468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906659469}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1906659469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906659468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 905238300}
+  - {fileID: 1522109106}
+  - {fileID: 6078425}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2044935815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044935816}
+  - component: {fileID: 2044935818}
+  - component: {fileID: 2044935817}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2044935816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044935815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 814876933}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2044935817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044935815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &2044935818
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044935815}
+  m_CullTransparentMesh: 0
+--- !u!1 &7496299730948891181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7496299730948891182}
+  - component: {fileID: 7496299730960162115}
+  m_Layer: 0
+  m_Name: UnityMainThreadDispatcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7496299730948891182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496299730948891181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7496299730960162115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496299730948891181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16173428f7358476fa784f899e396692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
