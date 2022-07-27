@@ -25,7 +25,7 @@ public class HealthKitManager : Singleton<HealthKitManager>
 		healthStore.ReadSteps(start, end, delegate (double steps, Error error) {
 			//UIManager.Instance.stepsDataValue.text = steps.ToString();
 			string answer = string.Format("You have made {0} steps since Yesterday", steps);
-			UIManager.Instance.stepsDataValue.text = answer;
+			//UIManager.Instance.stepsDataValue.text = answer;
 			List<String> stepsLog = new List<string>() { };
 			stepsLog.Add(answer);
 			UIManager.Instance.PopulateStepLogs(answer);
@@ -80,58 +80,58 @@ public class HealthKitManager : Singleton<HealthKitManager>
 	//	});
 	//}
 
-	public void ReadPedometer() {
-		DateTimeOffset start = DateTimeOffset.UtcNow;
+	//public void ReadPedometer() {
+	//	DateTimeOffset start = DateTimeOffset.UtcNow;
 
-		//if (!reading) {
-		//	int steps = 0;
-		//	this.healthStore.BeginReadingPedometerData(start, delegate(List<PedometerData> data, Error error) {
-		//		foreach (PedometerData sample in data) {
-		//			steps += sample.numberOfSteps;
-		//		}
-		//		this.resultsLabel.text = string.Format("{0}", steps);
-		//	});
-		//	buttonLabel.text = "Stop reading";
-		//	reading = true;
-		//} else {
-		//	this.healthStore.StopReadingPedometerData();
-		//	buttonLabel.text = "Start reading";
-		//	reading = false;
-		//}
+	//	//if (!reading) {
+	//	//	int steps = 0;
+	//	//	this.healthStore.BeginReadingPedometerData(start, delegate(List<PedometerData> data, Error error) {
+	//	//		foreach (PedometerData sample in data) {
+	//	//			steps += sample.numberOfSteps;
+	//	//		}
+	//	//		this.resultsLabel.text = string.Format("{0}", steps);
+	//	//	});
+	//	//	buttonLabel.text = "Stop reading";
+	//	//	reading = true;
+	//	//} else {
+	//	//	this.healthStore.StopReadingPedometerData();
+	//	//	buttonLabel.text = "Start reading";
+	//	//	reading = false;
+	//	//}
 
-		//buttonLabel.text = "Stop reading";
-		//reading = true;
-		int steps = 0;
-		this.healthStore.BeginReadingPedometerData(start, delegate (List<PedometerData> data, Error error) {
-			steps = 0;
-			foreach (PedometerData sample in data)
-			{
-				steps += sample.numberOfSteps;
-			}
-			//this.resultsLabel.text = string.Format("{0}", steps);
-			//UIManager.Instance.pedometer.text = string.Format("{0}", steps);
-			UIManager.Instance.pedometer.text = string.Format("You have done {0} steps", steps);
-		});
-	}
+	//	//buttonLabel.text = "Stop reading";
+	//	//reading = true;
+	//	int steps = 0;
+	//	this.healthStore.BeginReadingPedometerData(start, delegate (List<PedometerData> data, Error error) {
+	//		steps = 0;
+	//		foreach (PedometerData sample in data)
+	//		{
+	//			steps += sample.numberOfSteps;
+	//		}
+	//		//this.resultsLabel.text = string.Format("{0}", steps);
+	//		//UIManager.Instance.pedometer.text = string.Format("{0}", steps);
+	//		UIManager.Instance.pedometer.text = string.Format("You have done {0} steps", steps);
+	//	});
+	//}
 
-	public void ReadWalkDistance()
-	{
-		DateTimeOffset end = DateTimeOffset.UtcNow;
-		//DateTimeOffset start = end.AddMinutes(-10);
-		DateTimeOffset start = end.AddDays(-1);
+	//public void ReadWalkDistance()
+	//{
+	//	DateTimeOffset end = DateTimeOffset.UtcNow;
+	//	//DateTimeOffset start = end.AddMinutes(-10);
+	//	DateTimeOffset start = end.AddDays(-1);
 
-		int steps = 0;
-		this.healthStore.ReadQuantitySamples(HKDataType.HKQuantityTypeIdentifierDistanceWalkingRunning, start, end, delegate (List<QuantitySample> samples, Error error) {
-			Debug.Log("found " + samples.Count + " flights samples");
-			foreach (QuantitySample sample in samples)
-			{
-				Debug.Log("   - " + sample.quantity.doubleValue + " from " + sample.startDate + " to " + sample.endDate);
-				steps += Convert.ToInt32(sample.quantity.doubleValue);
-			}
+	//	int steps = 0;
+	//	this.healthStore.ReadQuantitySamples(HKDataType.HKQuantityTypeIdentifierDistanceWalkingRunning, start, end, delegate (List<QuantitySample> samples, Error error) {
+	//		Debug.Log("found " + samples.Count + " flights samples");
+	//		foreach (QuantitySample sample in samples)
+	//		{
+	//			Debug.Log("   - " + sample.quantity.doubleValue + " from " + sample.startDate + " to " + sample.endDate);
+	//			steps += Convert.ToInt32(sample.quantity.doubleValue);
+	//		}
 
-			UIManager.Instance.walkDistanceDataValue.text = string.Format("You have traveled {0} Km. since Yesterday", steps.ToString("#.##"));
-		});
-	}
+	//		UIManager.Instance.walkDistanceDataValue.text = string.Format("You have traveled {0} Km. since Yesterday", steps.ToString("#.##"));
+	//	});
+	//}
 
 	public void readAllSteps()
     {
@@ -159,12 +159,12 @@ public class HealthKitManager : Singleton<HealthKitManager>
 
 	private void readDatas()
     {
-		ReadPedometer();
-        //ReadSteps();
-  //      ReadWalkDistance();
-		//ReadFlights();
-		//ReadSleep();
-  //      readAllSteps();
+        //ReadPedometer();
+        ReadSteps();
+        //      ReadWalkDistance();
+        //ReadFlights();
+        //ReadSleep();
+        //      readAllSteps();
     }
 
 	private void loopSteps()

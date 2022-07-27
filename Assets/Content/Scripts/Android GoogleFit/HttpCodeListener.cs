@@ -17,13 +17,8 @@ public class HttpCodeListener
     public HttpCodeListener(int port)
     {
         listener = new HttpListener();
-        //listener.Prefixes.Add($"https://www.google.com/");
         listener.Prefixes.Add($"http://localhost:{port}/");
-        //listener.Prefixes.Add($"http://{LocalIPAddress()}:{port}/");
         listener.Prefixes.Add($"http://127.0.0.1:{port}/");
-        ////listener.Prefixes.Add("https://staging.murasaki7.com/");
-        ////listener.Prefixes.Add("https://fit-b741a.firebaseapp.com/");
-        //listener.Prefixes.Add($"https://fit-b741a.firebaseapp.com:{port}/");
         listener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
     }
 

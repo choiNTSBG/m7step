@@ -12,8 +12,8 @@ using UnityEngine.Networking;
 
 public static class GoogleAuthenticator
 {
-    private const string ClientId = "234054440659-bdg0bbhg1cf8mva1svg0i67jonercjeg.apps.googleusercontent.com"; //TODO: Change [CLIENT_ID] to your CLIENT_ID
-    private const string ClientSecret = "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"; //TODO: Change [CLIENT_SECRET] to your CLIENT_SECRET
+    private const string ClientId = "552046465774-aaofcj2rej6c05r0cpehcq6f7cpgsj2u.apps.googleusercontent.com"; //TODO: Change [CLIENT_ID] to your CLIENT_ID
+    private const string ClientSecret = "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"; //TODO: Change [CLIENT_SECRET] to your CLIENT_SECRET
     
     private const int Port = 8080;
     private static string RedirectUri = $"http://127.0.0.1:{Port}";
