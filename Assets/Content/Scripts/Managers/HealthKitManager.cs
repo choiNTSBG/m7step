@@ -67,10 +67,6 @@ public class HealthKitManager : Singleton<HealthKitManager>
 			{
 				Debug.Log("found no samples");
 			}
-
-
-			// all done
-			reading = false;
 		});
 	}
 
