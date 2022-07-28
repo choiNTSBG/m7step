@@ -101,7 +101,8 @@ public static class GoogleAuthenticator
                     {"client_id", ClientId},
                     {"client_secret", ClientSecret},
                     {"redirect_uri", RedirectUri},
-                    {"grant_type", "authorization_code"}
+                    {"grant_type", "authorization_code"},
+                    {"pageToken", "xCNPRh4GjMBoWWG1SaHU4LWQ1U1p4dU1EQXhDTmpRdw"}
                 }
             }).Then(
                 response =>

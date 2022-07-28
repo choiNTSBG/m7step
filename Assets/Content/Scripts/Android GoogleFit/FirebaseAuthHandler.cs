@@ -1,4 +1,5 @@
 ﻿using Proyecto26;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -28,14 +29,16 @@ public static class FirebaseAuthHandler
 
     public static void GetStepsData(string token)
     {
-        string url = "https://fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?access_token=" + token;
-        //string url = "https://www.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/datasets/1658320628-1658925563?access_token=" + token;
-        Debug.Log("GetStepsData URL: " + url);
-        RestClient.Get(url).Then(
-            response =>
-            {
-                Debug.Log("GetStepsData: " + response.Text);
-                UIManager.Instance.PopulateStepLogsJson(response.Text);
-            }).Catch(Debug.Log);
+        ////string url = "https://fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?access_token=" + token;
+        //string url = "https://content-fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?access_token=" + token;
+        //Debug.Log("GetStepsData URL: " + url);
+        //RestClient.Get(url).Then(
+        //    response =>
+        //    {
+        //        Debug.Log("GetStepsData: " + response.Text);
+        //        UIManager.Instance.PopulateStepLogsJson(response.Text);
+        //    }).Catch(Debug.Log);
+        UIManager.Instance.GetRequestData(token);
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
@@ -52,8 +53,6 @@ public class UIManager : Singleton<UIManager>
 
     public void PopulateStepLogsJson(string json)
     {
-        GameObject log = Instantiate(stepLogPrefab, stepLogContainer);
-        log.GetComponent<Text>().text = json;
         GoogleFitData googleFitData =  JsonUtility.FromJson<GoogleFitData>(json);
         for (int i = 0; i < googleFitData.insertedDataPoint.Length; i++)
         {
@@ -64,7 +63,7 @@ public class UIManager : Singleton<UIManager>
             {
                 DateTime end = convertNano(googleFitData.insertedDataPoint[i].endTimeNanos);
                 GameObject stepLog = Instantiate(stepLogPrefab, stepLogContainer);
-                string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end, googleFitData.insertedDataPoint[i].value[0].intVal.ToString());
+                string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end.ToString("h:mm:ss tt"), googleFitData.insertedDataPoint[i].value[0].intVal.ToString());
                 stepLog.GetComponent<Text>().text = answer;
             }
         }
@@ -80,13 +79,28 @@ public class UIManager : Singleton<UIManager>
         GoogleAuthenticator.GetAuthCode();
     }
 
+    public void GetRequestData(string token)
+    {
+        StartCoroutine(GetRequest(token));
+    }
     #endregion
 
     #region Private Variables
     private DateTime convertNano(long nano)
     {
         DateTime epochTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-        return epochTime.AddTicks(nano / 100);
+        return epochTime.AddTicks(nano / 100).ToLocalTime();
+    }
+
+    private IEnumerator GetRequest(string token)
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get("https://content-fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?pageToken=xCNPRh4GjMBoWWG1SaHU4LWQ1U1p4dU1EQXhDTmpRdw=="))
+        {
+            webRequest.SetRequestHeader("Authorization", "Bearer " + token);
+            yield return webRequest.SendWebRequest();
+            Debug.Log("GetStepsData: " + webRequest.downloadHandler.text);
+            PopulateStepLogsJson(webRequest.downloadHandler.text);
+        }
     }
     #endregion
 }
