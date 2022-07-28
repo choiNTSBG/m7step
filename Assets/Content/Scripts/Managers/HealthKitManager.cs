@@ -24,7 +24,8 @@ public class HealthKitManager : Singleton<HealthKitManager>
 
 		healthStore.ReadSteps(start, end, delegate (double steps, Error error) {
 			//UIManager.Instance.stepsDataValue.text = steps.ToString();
-			string answer = string.Format("You have made {0} steps since Yesterday", steps);
+			//string answer = string.Format("You have made {0} steps since Yesterday", steps);
+			string answer = string.Format("In {0} to {1}, you have made {2} steps", start.ToLocalTime(), end.ToLocalTime().ToString("h:mm:ss tt"), steps.ToString());
 			//UIManager.Instance.stepsDataValue.text = answer;
 			List<String> stepsLog = new List<string>() { };
 			stepsLog.Add(answer);
