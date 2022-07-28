@@ -22,14 +22,55 @@ public class HealthKitManager : Singleton<HealthKitManager>
 		DateTimeOffset end = DateTimeOffset.UtcNow;
 		DateTimeOffset start = end.AddDays(-7);
 
-		healthStore.ReadSteps(start, end, delegate (double steps, Error error) {
-			//UIManager.Instance.stepsDataValue.text = steps.ToString();
-			//string answer = string.Format("You have made {0} steps since Yesterday", steps);
-			string answer = string.Format("In {0} to {1}, you have made {2} steps", start.ToLocalTime(), end.ToLocalTime().ToString("h:mm:ss tt"), steps.ToString());
-			//UIManager.Instance.stepsDataValue.text = answer;
-			List<String> stepsLog = new List<string>() { };
-			stepsLog.Add(answer);
-			UIManager.Instance.PopulateStepLogs(answer);
+		//healthStore.ReadSteps(start, end, delegate (double steps, Error error) {
+		//	//UIManager.Instance.stepsDataValue.text = steps.ToString();
+		//	//string answer = string.Format("You have made {0} steps since Yesterday", steps);
+		//	string answer = string.Format("In {0} to {1}, you have made {2} steps", start.ToLocalTime(), end.ToLocalTime().ToString("h:mm:ss tt"), steps.ToString());
+		//	//UIManager.Instance.stepsDataValue.text = answer;
+		//	List<String> stepsLog = new List<string>() { };
+		//	stepsLog.Add(answer);
+		//	UIManager.Instance.PopulateStepLogs(answer);
+		//});
+
+		this.healthStore.ReadQuantitySamples(HKDataType.HKQuantityTypeIdentifierStepCount, start, end, delegate (List<QuantitySample> samples, Error error) {
+			if (samples.Count > 0)
+			{
+				Debug.Log("found " + samples.Count + " samples");
+				bool cumulative = (samples[0].quantityType == QuantityType.cumulative);
+				string text = "";
+				double sum = 0;
+				foreach (QuantitySample sample in samples)
+				{
+					Debug.LogFormat("   - {0} : {1}", sample, sample.quantity.doubleValue);
+					if (cumulative)
+					{
+						sum += Convert.ToInt32(sample.quantity.doubleValue);
+						Debug.LogFormat("       - sum:{0}", sample.sumQuantity);
+					}
+					else
+					{
+						text = text + "- " + sample + "\n";
+						Debug.LogFormat("       - min:{0} / max:{1} / avg:{2}", sample.minimumQuantity, sample.maximumQuantity, sample.averageQuantity);
+					}
+				}
+
+				if (cumulative)
+				{
+					Debug.LogFormat("       - sum:{0}", sum);
+				}
+				else
+				{
+					Debug.LogFormat("{0}", text);
+				}
+			}
+			else
+			{
+				Debug.Log("found no samples");
+			}
+
+
+			// all done
+			reading = false;
 		});
 	}
 
