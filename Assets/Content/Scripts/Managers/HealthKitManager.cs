@@ -20,7 +20,7 @@ public class HealthKitManager : Singleton<HealthKitManager>
 	public void ReadSteps()
 	{
 		DateTimeOffset end = DateTimeOffset.UtcNow;
-		DateTimeOffset start = end.AddDays(-1);
+		DateTimeOffset start = end.AddDays(-7);
 
 		healthStore.ReadSteps(start, end, delegate (double steps, Error error) {
 			//UIManager.Instance.stepsDataValue.text = steps.ToString();
