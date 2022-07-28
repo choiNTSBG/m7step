@@ -36,32 +36,14 @@ public class HealthKitManager : Singleton<HealthKitManager>
 			if (samples.Count > 0)
 			{
 				Debug.Log("found " + samples.Count + " samples");
-				bool cumulative = (samples[0].quantityType == QuantityType.cumulative);
-				string text = "";
-				double sum = 0;
+				int step = 0;
 				foreach (QuantitySample sample in samples)
 				{
-					Debug.LogFormat("   - {0} : {1}", sample, sample.quantity.doubleValue);
-					if (cumulative)
-					{
-						sum += Convert.ToInt32(sample.quantity.doubleValue);
-						Debug.LogFormat("       - sum:{0}", sample.sumQuantity);
-					}
-					else
-					{
-						text = text + "- " + sample + "\n";
-						Debug.LogFormat("       - min:{0} / max:{1} / avg:{2}", sample.minimumQuantity, sample.maximumQuantity, sample.averageQuantity);
-					}
+					step += Convert.ToInt32(sample.quantity.doubleValue);
+					string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end.ToString("h:mm:ss tt"), step);
+					UIManager.Instance.PopulateStepLogs(answer);
 				}
 
-				if (cumulative)
-				{
-					Debug.LogFormat("       - sum:{0}", sum);
-				}
-				else
-				{
-					Debug.LogFormat("{0}", text);
-				}
 			}
 			else
 			{
