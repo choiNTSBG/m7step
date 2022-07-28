@@ -51,21 +51,29 @@ public class UIManager : Singleton<UIManager>
         stepLog.GetComponent<Text>().text = stepLogs;
     }
 
-    public void PopulateStepLogsJson(string json)
+    public void PopulateStepLogsJson(string token, string json)
     {
         GoogleFitData googleFitData =  JsonUtility.FromJson<GoogleFitData>(json);
-        for (int i = 0; i < googleFitData.insertedDataPoint.Length; i++)
+        if(googleFitData.insertedDataPoint.Length != 0)
         {
-            DateTime now = DateTime.Now;
-            DateTime aWeekAgo = now.AddDays(-1);
-            DateTime start = convertNano(googleFitData.insertedDataPoint[i].startTimeNanos);
-            if (DateTime.Compare(aWeekAgo, start) < 0)
+            for (int i = 0; i < googleFitData.insertedDataPoint.Length; i++)
             {
-                DateTime end = convertNano(googleFitData.insertedDataPoint[i].endTimeNanos);
-                GameObject stepLog = Instantiate(stepLogPrefab, stepLogContainer);
-                string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end.ToString("h:mm:ss tt"), googleFitData.insertedDataPoint[i].value[0].intVal.ToString());
-                stepLog.GetComponent<Text>().text = answer;
+                DateTime now = DateTime.Now;
+                DateTime aWeekAgo = now.AddDays(-7);
+                DateTime start = convertNano(googleFitData.insertedDataPoint[i].startTimeNanos);
+                if (DateTime.Compare(aWeekAgo, start) < 0)
+                {
+                    DateTime end = convertNano(googleFitData.insertedDataPoint[i].endTimeNanos);
+                    GameObject stepLog = Instantiate(stepLogPrefab, stepLogContainer);
+                    string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end.ToString("h:mm:ss tt"), googleFitData.insertedDataPoint[i].value[0].intVal.ToString());
+                    stepLog.GetComponent<Text>().text = answer;
+                }
             }
+            GetRequestData(token, googleFitData.nextPageToken);
+        }
+        else
+        {
+            Debug.Log("no more Data");
         }
     }
 
@@ -79,9 +87,9 @@ public class UIManager : Singleton<UIManager>
         GoogleAuthenticator.GetAuthCode();
     }
 
-    public void GetRequestData(string token)
+    public void GetRequestData(string token, string nextPageToken = null)
     {
-        StartCoroutine(GetRequest(token));
+        StartCoroutine(GetRequest(token, nextPageToken));
     }
     #endregion
 
@@ -92,14 +100,23 @@ public class UIManager : Singleton<UIManager>
         return epochTime.AddTicks(nano / 100).ToLocalTime();
     }
 
-    private IEnumerator GetRequest(string token)
+    private IEnumerator GetRequest(string token, string nextPageToken = null)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get("https://content-fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?pageToken=xCNPRh4GjMBoWWG1SaHU4LWQ1U1p4dU1EQXhDTmpRdw=="))
+
+        string nextPageTokenUrlParam = "";
+        if(nextPageToken != null)
+        {
+            nextPageTokenUrlParam = $"?pageToken={nextPageToken}";
+        }
+        //using (UnityWebRequest webRequest = UnityWebRequest.Get("https://content-fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges?pageToken=xCNPRh4GjMBoWWG1SaHU4LWQ1U1p4dU1EQXhDTmpRdw=="))
+        string url = $"https://content-fitness.googleapis.com/fitness/v1/users/me/dataSources/derived:com.google.step_count.delta:com.google.android.gms:estimated_steps/dataPointChanges{nextPageTokenUrlParam}";
+        Debug.Log("Steps GetRequest: " + url);
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
             webRequest.SetRequestHeader("Authorization", "Bearer " + token);
             yield return webRequest.SendWebRequest();
             Debug.Log("GetStepsData: " + webRequest.downloadHandler.text);
-            PopulateStepLogsJson(webRequest.downloadHandler.text);
+            PopulateStepLogsJson(token, webRequest.downloadHandler.text);
         }
     }
     #endregion
