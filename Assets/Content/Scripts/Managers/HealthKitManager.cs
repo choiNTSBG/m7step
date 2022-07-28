@@ -40,7 +40,7 @@ public class HealthKitManager : Singleton<HealthKitManager>
 				foreach (QuantitySample sample in samples)
 				{
 					step += Convert.ToInt32(sample.quantity.doubleValue);
-					string answer = string.Format("In {0} to {1}, you have made {2} steps", start, end.ToString("h:mm:ss tt"), step);
+					string answer = string.Format("In {0} to {1}, you have made {2} steps", sample.startDate, sample.endDate.ToString("h:mm:ss tt"), step);
 					UIManager.Instance.PopulateStepLogs(answer);
 				}
 
